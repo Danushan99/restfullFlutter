@@ -1,0 +1,6 @@
+
+The code you provided defines a function called makeIncreament that takes
+ an integer amount as input and returns another function 
+ of type () -> Int. This returned function increments a 
+ runningTotal variable by the amount passed in to makeIncreament, 
+ and returns the updated value of runningTotal.

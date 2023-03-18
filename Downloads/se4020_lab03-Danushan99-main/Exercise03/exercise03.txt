@@ -1,0 +1,39 @@
+
+func findShortestAndLongestStrings(_ strings: [String]) -> (shortest: String, longest: String) {
+    var shortest = strings[0]
+    var longest = strings[0]
+    for string in strings {
+        if string.count < shortest.count {
+            shortest = string
+        }
+        if string.count > longest.count {
+            longest = string
+        }
+    }
+    return (shortest, longest)
+}
+
+
+let strings = ["dhanu", "abi", "aki", "suja"]
+let result = findShortestAndLongestStrings(strings)
+print("Shortest: \(result.shortest), longest: \(result.longest)")
+
+
+func findShortestAndLongestStringsInPlace(_ strings: inout [String], shortest: inout String, longest: inout String) {
+    shortest = strings[0]
+    longest = strings[0]
+    for string in strings {
+        if string.count < shortest.count {
+            shortest = string
+        }
+        if string.count > longest.count {
+            longest = string
+        }
+    }
+}
+
+var strings = ["apple", "banana", "cherry", "date"]
+var shortest = ""
+var longest = ""
+findShortestAndLongestStringsInPlace(&strings, shortest: &shortest, longest: &longest)
+print("Shortest: \(shortest), longest: \(longest)")

@@ -1,0 +1,23 @@
+
+func display(no: Int) {
+    print("Calling display(no: Int) with argument \(no)")
+}
+
+func display(anotherNo: Int) {
+    print("Calling display(anotherNo: Int) with argument \(anotherNo)")
+}
+
+func display(no: Double) {
+    print("Calling display(no: Double) with argument \(no)")
+}
+
+func display(_ no: Double) {
+    print("Calling display(_ no: Double) with argument \(no)")
+}
+
+
+//print 
+display(no: 5)
+display(anotherNo: 10)
+display(no: 3.14)
+display(2.71828)
